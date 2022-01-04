@@ -4,7 +4,7 @@ import torch
 from torch.nn import functional as F
 import glob
 from tqdm import tqdm
-
+import os
 
 
 def filter2D(img, kernel):
@@ -35,7 +35,7 @@ def filter2D(img, kernel):
 
 
 def usm_sharp(img, weight=0.5, radius=50, threshold=10):
-    """USM sharpening.
+    """USM sharpening
 
     Input image: I; Blurry image: B.
     1. sharp = I + weight * (I - B)
@@ -88,13 +88,13 @@ class USMSharp(torch.nn.Module):
 
 if __name__ == "__main__":
 
-    FilePath=""
-    SavePath=""
+    FilePath=r"E:\laopianxiufu\youku\*\*.png"
+    SavePath=r"E:\laopianxiufu\youku_USM"
     Files = glob.glob(FilePath)
     for i,File in enumerate(tqdm(Files)):
-        img = cv2.imread(File)
+        img = cv2.imread(File)/255.0
 
-        new_img = usm_sharp(img)
+        new_img = usm_sharp(img,20,10,40)*255.0
         NewFile = os.path.join(SavePath,str(i).zfill(4)+".png")
         cv2.imwrite(NewFile,new_img)
 
