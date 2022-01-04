@@ -2,8 +2,8 @@ import glob
 import os
 import shutil
 from tqdm import tqdm
-FilePath = "E:\老片修复\hlm2_track3\*\*.png"
-SavePath = "E:\老片修复\hlm_track3"
+FilePath = "/data/hj/mmediting-master/hlmtrack3_hisense_230000/*/*.png"
+SavePath = "/data/hj/mmediting-master/hlmtrack3_hisense_230000_combate"
 Files = sorted(glob.glob(FilePath))
 
 if __name__ == "__main__":
