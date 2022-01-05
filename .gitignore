@@ -1,2 +1,5 @@
 # ignored folders
 .idea/*
+*.mp4
+*.mkv
+*.avi
