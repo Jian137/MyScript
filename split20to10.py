@@ -4,7 +4,7 @@ from tqdm import tqdm
 from glob import glob
 
 FileFolderPath = "/data/hj/mmediting-master/rzwc/*"
-SavePath = "/data/hj/mmediting-master/wzt_7/"
+SavePath = "/data/hj/mmediting-master/rzwc_7/"
 FileFolders = sorted(glob(FileFolderPath))
 num = 7
 if not os.path.exists(SavePath):

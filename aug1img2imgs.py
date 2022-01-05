@@ -3,7 +3,7 @@ import shutil
 from tqdm import tqdm
 from glob import glob
 
-DstFolders = sorted(glob("/data/hj/mmediting-master/wzt_7/*"))
+DstFolders = sorted(glob("/data/hj/mmediting-master/rzwc_7/*"))
 
 for i,DstFolder in enumerate(tqdm(DstFolders)):
 
