@@ -9,4 +9,4 @@ Files = sorted(glob.glob(FilePath))
 if __name__ == "__main__":
     for i,File in enumerate(tqdm(Files)):
         FileName = os.path.join(SavePath,str(i).zfill(4)+".png")
-        shutil.move(File,FileName)
+        shutil.copy(File,FileName)
